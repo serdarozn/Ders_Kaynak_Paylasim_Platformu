@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Sanal Ortam
+.venv/
+venv/
+ENV/
+env/
+
+# Test ve Önbellek
+.pytest_cache/
+test_uploads/
+.coverage
+htmlcov/
+
+# Çevre Değişkenleri ve Gizli Anahtarlar
+.env
+
+# Geçici dosyalar
+*.log
+.DS_Store
+Thumbs.db

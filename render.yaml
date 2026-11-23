@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: selcuk-ders-notu-platformu
+    runtime: python
+    buildCommand: pip install -r requirements.txt && python init_db.py
+    startCommand: gunicorn app:app --workers 2 --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.8
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ADMIN_PASSWORD
+        value: admin123

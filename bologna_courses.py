@@ -1,0 +1,3282 @@
+# Selçuk Üniversitesi Teknoloji Fakültesi Bologna Lisans Müfredatı
+# Bilgisayar, Elektrik-Elektronik ve Makine Mühendisliği Bölüm Dersleri
+
+DEPARTMENTS = {
+    'ceng': 'Bilgisayar Mühendisliği',
+    'ee': 'Elektrik-Elektronik Mühendisliği',
+    'me': 'Makine Mühendisliği'
+}
+
+FACULTY_COURSES = {
+    "ceng": {
+        "department_name": "Bilgisayar Mühendisliği",
+        "courses": [
+            {
+                "code": "3301151",
+                "name": "MATEMATİK-1",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "6",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301152",
+                "name": "FİZİK-1",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "6",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301153",
+                "name": "TÜRK DİLİ I",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301154",
+                "name": "ATATÜRK İLKELERİ VE İNKILAP TARİHİ-1",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301155",
+                "name": "YABANCI DİL-1",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301156",
+                "name": "BİLGİSAYAR MÜHENDİSLİĞİNE GİRİŞ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301157",
+                "name": "İŞ SAĞLIĞI VE GÜVENLİĞİ-1",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301158",
+                "name": "LİNEER CEBİR",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "6",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301251",
+                "name": "MATEMATİK-2",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "6",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301252",
+                "name": "FİZİK-2",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "6",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301253",
+                "name": "TÜRK DİLİ II",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301254",
+                "name": "ATATÜRK İLKELERİ VE İNKILAP TARİHİ-2",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301255",
+                "name": "YABANCI DİL-2",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301256",
+                "name": "PROGRAMLAMA DİLİ-1",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301257",
+                "name": "İŞ SAĞLIĞI VE GÜVENLİĞİ-2",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301258",
+                "name": "AYRIK MATEMATİK",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "6",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301351",
+                "name": "NESNEYE YÖNELİK PROGRAMLAMA DİLİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301352",
+                "name": "İŞLETİM SİSTEMLERİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301353",
+                "name": "MANTIK DEVRELERİ-1",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301354",
+                "name": "VERİ YAPILARI VE UYGULAMALARI",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301355",
+                "name": "ELEKTRONİK DEVRE ELEMANLARI VE ÖLÇME",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301356",
+                "name": "SAYISAL YÖNTEMLER",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301357",
+                "name": "iSTATİSTİK VE OLASILIK",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301451",
+                "name": "MÜHENDİSLİK MATEMATİĞİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "7",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301452",
+                "name": "PROGRAMLAMA DİLİ-2",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301453",
+                "name": "MANTIK DEVRELERİ-2",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301454",
+                "name": "VERİTABANI YÖNETİM SİSTEMLERİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301455",
+                "name": "YAZILIM MÜHENDİSLİĞİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301456",
+                "name": "MOBİL PROGRAMLAMA",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301461",
+                "name": "TEKNOLOJİ TARİHİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301462",
+                "name": "İŞ HUKUKU VE ETİK",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301463",
+                "name": "İLETİŞİM BECERİLERİ VE AKADEMİK RAPORLAMA",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301464",
+                "name": "SOSYAL SORUMLULUK VE DEĞERLER EĞİTİMİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301465",
+                "name": "ETKİLİ İLETİŞİM VE BEDEN DİLİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301466",
+                "name": "MEDYA OKUR YAZARLIĞI",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301467",
+                "name": "YÖNETİM VE ORGANİZASYON",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301468",
+                "name": "ÇEVRE VE EKOLOJİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301469",
+                "name": "YAŞAM BOYU ÖĞRENME",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301470",
+                "name": "İLETİŞİM VE STRES YÖNETİMİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301471",
+                "name": "GÖNÜLLÜLÜK ÇALIŞMALARI",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301472",
+                "name": "DİJİTAL DÖNÜŞÜM",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301473",
+                "name": "SOSYAL İNGİLİZCE",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301551",
+                "name": "MİKROİŞLEMCİLER VE MİKRODENETLEYİCİLER",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301552",
+                "name": "PROGRAMLAMA DİLİ-3",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301553",
+                "name": "VERİ HABERLEŞMESİ VE AĞLAR",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301554",
+                "name": "TEKNİK İNGİLİZCE",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "3",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301561",
+                "name": "SİNYAL İŞLEME",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301562",
+                "name": "TASARIM DESENLERİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301563",
+                "name": "İNSAN BİLGİSAYAR ETKİLEŞİMİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301564",
+                "name": "BİYOMEDİKAL SİSTEMLER",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301565",
+                "name": "SİMÜLASYON VE MODELLEME",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301566",
+                "name": "BİLGİSAYAR DONANIMI",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301567",
+                "name": "WEB TASARIMI",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301568",
+                "name": "VERİ MADENCİLİĞİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301569",
+                "name": "ADLİ BİLİŞİM",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301570",
+                "name": "VERİ TABANI PROGRMALAMA",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301571",
+                "name": "MAKİNE ÖĞRENMESİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301572",
+                "name": "ALGORİTMA ANALİZİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301573",
+                "name": "DOĞAL DİL İŞLEME TEMELLERİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301574",
+                "name": "NESNELERİN İNTERNETİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301575",
+                "name": "İLERİ DİJİTAL SİSTEMLER",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301576",
+                "name": "BİLGİSAYAR MÜHENDİSLİĞİNDE ÖZEL KONULAR",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301577",
+                "name": "SİBER SİSTEMLER VE BİLGİ GÜVENLİĞİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301578",
+                "name": "SÜRDÜRÜLEBİLİR YAZILIM MÜHENDİSLİĞİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301651",
+                "name": "YAPAY ZEKA",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301652",
+                "name": "OTOMATA TEORİSİ VE BİÇİMSEL DİLLER",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301653",
+                "name": "GÖRÜNTÜ İŞLEME",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301654",
+                "name": "MÜHENDİSLİK TASARIMI",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "6",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301661",
+                "name": "SİSTEM PROGRAMLAMA",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301662",
+                "name": "BİLGİSAYAR VE AĞ GÜVENLİĞİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301663",
+                "name": "GÖMÜLÜ SİSTEMLER",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301664",
+                "name": "İŞ ZEKASI",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301665",
+                "name": "ROBOTİK",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301666",
+                "name": "İŞLETİM SİSTEMLERİ YÖNETİMİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301667",
+                "name": "WEB SERVİSLERİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301668",
+                "name": "MİKROBİLGİSAYARLI SİSTEM TASARIMI",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301669",
+                "name": "MESLEKİ İNGİLİZCE",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301670",
+                "name": "KRİPTOLOJİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301671",
+                "name": "BİLGİSAYAR BİLİMLERİNDE İNOVASYON VE ARAŞTIRMA TEKNİKLERİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301672",
+                "name": "DİSİPLİNLERARASI ÇALIŞMA",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301673",
+                "name": "GERÇEKÇİ MODELLEME VE SİMÜLASYON TASARIMI",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301674",
+                "name": "WEB PROGRAMLAMA",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301675",
+                "name": "SÜRDÜRÜLEBİLİR BİLİŞİM TEKNOLOJİLERİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301676",
+                "name": "STEGANOGRAFİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301751",
+                "name": "BİLGİSAYAR MÜHENDİSLİĞİ UYGULAMALARI",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301752",
+                "name": "BİLGİSAYAR MİMARİSİ VE ORGANİZASYONU",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301753",
+                "name": "VERİ BİLİMİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301754",
+                "name": "GİRİŞİMCİLİK VE PROJE YÖNETİMİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "3",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301761",
+                "name": "PROG. MANTIK KONTROLLÖR",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301762",
+                "name": "PARALEL İŞLEMCİLİ SİSTEMLER",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301763",
+                "name": "KONTROL SİSTEMLERİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301764",
+                "name": "BİLGİSAYAR DESTEKLİ TASARIM",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301765",
+                "name": "YÖNEYLEM ARAŞTIRMASI",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301766",
+                "name": "KABLOSUZ AĞLAR",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301767",
+                "name": "BULUT BİLİŞİM",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301768",
+                "name": "PAKET PROGRAMLAR",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301769",
+                "name": "BİLGİSAYAR GRAFİKLERİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301770",
+                "name": "VERİ İLETİŞİM TEKNİKLERİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301771",
+                "name": "OYUN PROGRAMLAMA",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301772",
+                "name": "E-TİCARET VE UYGULAMALARI",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301773",
+                "name": "PARALEL PROGRAMLAMA",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301774",
+                "name": "MVC TABANLI WEB MİMARİSİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301775",
+                "name": "YEŞİL BİLİŞİM",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301776",
+                "name": "ÇEVRE VE ENERJİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "6",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301777",
+                "name": "BLOKZİNCİR TEMELLERİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301778",
+                "name": "BÜYÜK VERİ ANALİTİĞİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301779",
+                "name": "BİLGİSAYARLA GÖRME",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301782",
+                "name": "KALİTE VE GÜVENCE SİSTEMLERİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301783",
+                "name": "MÜHENDİSLİK EKONOMİSİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301784",
+                "name": "İŞARET DİLİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301785",
+                "name": "DIŞ TİCARET",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301786",
+                "name": "TOPLUMA HİZMET UYGULAMALARI",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301787",
+                "name": "REKLAMCILIK VE STRATEJİLERİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301788",
+                "name": "ARAŞTIRMA VE RAPOR YAZMA TEKNİKLERİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301789",
+                "name": "MÜHENDİSLİK ETİĞİ",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3301851",
+                "name": "İŞLETMEDE MESLEKİ EĞİTİM",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 8,
+                "akts": "20",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301852",
+                "name": "STAJ-1",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 8,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301853",
+                "name": "STAJ-2",
+                "department_key": "ceng",
+                "department_name": "Bilgisayar Mühendisliği",
+                "class_level": 4,
+                "semester": 8,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            }
+        ]
+    },
+    "ee": {
+        "department_name": "Elektrik-Elektronik Mühendisliği",
+        "courses": [
+            {
+                "code": "3302151",
+                "name": "ATATÜRK İLKELERİ VE İNKILAP TARİHİ-I",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302152",
+                "name": "TÜRK DİLİ-I",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302153",
+                "name": "YABANCI DİL-I",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302154",
+                "name": "FİZİK-I",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "6",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302155",
+                "name": "MATEMATİK-I",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "6",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302156",
+                "name": "PROGRAMLAMA",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302157",
+                "name": "ELEKTRİK-ELEKTRONİK MÜH. GİRİŞ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302158",
+                "name": "KİMYA",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "6",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302251",
+                "name": "GÖRSEL PROGRAMLAMA",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302252",
+                "name": "ATATÜRK İLKELERİ VE İNKILAP TARİHİ-II",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302253",
+                "name": "TÜRK DİLİ-II",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302254",
+                "name": "YABANCI DİL-II",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302255",
+                "name": "FİZİK-II",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302256",
+                "name": "LİNEER CEBİR",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302257",
+                "name": "ELEKTRİK VE ELEKTRONİK ÖLÇMELERİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302258",
+                "name": "MATEMATİK-II",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "6",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302351",
+                "name": "İSTATİSTİK VE OLASILIK",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302352",
+                "name": "DEVRE ANALİZİ-1",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302353",
+                "name": "ELEKTRONİK-1",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302354",
+                "name": "MANTIK DEVRELERİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302355",
+                "name": "ELEKTROMANYETİK ALAN TEORİSİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "3",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302356",
+                "name": "İŞ SAĞLIĞI VE GÜVENLİĞİ-1",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302357",
+                "name": "SAYISAL ANALİZ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302451",
+                "name": "SİNYALLER VE SİSTEMLER",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "3",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302452",
+                "name": "DEVRE ANALİZİ-2",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302453",
+                "name": "ELEKTRONİK-2",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302454",
+                "name": "MANTIK DEVRELERİ TASARIMI",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302455",
+                "name": "İŞ SAĞLIĞI VE GÜVENLİĞİ-2",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302456",
+                "name": "DİFERANSİYEL DENKLEMLER",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302457",
+                "name": "SENSÖRLER VE DÖNÜŞTÜRÜCÜLER",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "3",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302459",
+                "name": "MÜHENDİSLİK VERİ MADENCİLİĞİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "3",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302461",
+                "name": "İŞ HUKUKU VE ETİK",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302463",
+                "name": "SOSYAL SORUMLULUK VE DEĞERLER EĞİTİMİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302551",
+                "name": "KONTROL SİSTEMLERİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302552",
+                "name": "ELEKTROMEKANİK ENERJİ DÖNÜŞÜMÜ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302553",
+                "name": "GÜÇ ELEKTRONİĞİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302554",
+                "name": "MİKRODENETLEYİCİLER",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302555",
+                "name": "YÜKSEK GERİLİM TEKNİĞİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302556",
+                "name": "VERİ İLETİŞİM TEKNİKLERİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302557",
+                "name": "MİKRODALGA TEKNİĞİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302558",
+                "name": "YENİLENEBİLİR ENERJİ KAYNAKLARI",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302559",
+                "name": "ELEKTRONİK DEVRE TASARIMI",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302561",
+                "name": "MAKİNE ÖĞRENMESİ VE YAPAY ZEKA",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302562",
+                "name": "ANALOG HABERLEŞME",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302563",
+                "name": "ROBOTİK SİSTEMLERE GİRİŞ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302651",
+                "name": "ENDÜSTRİYEL OTOMASYON",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302652",
+                "name": "ELEKTRİK MAKİNELERİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302653",
+                "name": "MÜHENDİSLİK TASARIMI",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302654",
+                "name": "TEKNİK İNGİLİZCE",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "3",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302655",
+                "name": "ELEKTRİK ENERJİ ÜRETİMİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302656",
+                "name": "GÖMÜLÜ SİSTEMLER",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302657",
+                "name": "ELEKTRİK TESİSLERİNDE KORUMA",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302658",
+                "name": "SAYISAL HABERLEŞME",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302659",
+                "name": "GÖRÜNTÜ İŞLEME",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302660",
+                "name": "GÜÇ SİSTEMİ ANALİZİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302661",
+                "name": "SAYISAL KONTROL SİSTEMLERİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302662",
+                "name": "GÜÇ ELEKTRONİĞİNİN ENDÜSTRİYEL UYGULAMALARI",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302663",
+                "name": "FİLTRE TASARIMI",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302664",
+                "name": "ELEKTRİK İLETİM SİSTEMLERİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302665",
+                "name": "ENERJİ DEPOLAMA SİSTEMLERİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302666",
+                "name": "DERİN ÖĞRENMENIN TEMELLERİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302751",
+                "name": "ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ UYGULAMALARI",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "6",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302752",
+                "name": "AYRIK MATEMATİK",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "6",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302753",
+                "name": "GİRİŞİMCİLİK VE PROJE YÖNETİMİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302755",
+                "name": "AYDINLATMA VE İÇ TESİSAT",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302756",
+                "name": "FPGA İLE SAYISAL SİSTEM TASARIMI",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302758",
+                "name": "SAYISAL SİNYAL İŞLEME",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302759",
+                "name": "ELEKTRİK MOTORLARI SÜRÜCÜLERİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302760",
+                "name": "ELEKTROMANYETİK UYUMLULUK VE GİRİŞİM",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302761",
+                "name": "ANTENLER VE YAYILMA",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302762",
+                "name": "ELEKTRİK DAĞITIM SİSTEMLERİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302763",
+                "name": "GENİŞ ÖLÇEKLİ TÜM DEVRE (VLSI) TASARIMI",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302764",
+                "name": "TIP ELEKTRONİĞİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302765",
+                "name": "ÖZEL ELEKTRİK MAKİNALARI",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302767",
+                "name": "GÖNÜLLÜLÜK ÇALIŞMALARI",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302768",
+                "name": "MÜHENDİSLİK EKONOMİSİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302769",
+                "name": "KALİTE VE GÜVENCE SİSTEMİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302770",
+                "name": "ARAŞTIRMA VE RAPOR YAZMA TEKNİKLERİ",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "6",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3302851",
+                "name": "İŞLETMEDE MESLEKİ EĞİTİM",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 8,
+                "akts": "20",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302852",
+                "name": "STAJ-1",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 8,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3302853",
+                "name": "STAJ-2",
+                "department_key": "ee",
+                "department_name": "Elektrik-Elektronik Mühendisliği",
+                "class_level": 4,
+                "semester": 8,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            }
+        ]
+    },
+    "me": {
+        "department_name": "Makine Mühendisliği",
+        "courses": [
+            {
+                "code": "3303101",
+                "name": "TÜRK DİLİ I",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303103",
+                "name": "ATATÜRK İLKE VE INKILAPLARI TARİHİ-1",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "2",
+                "type": ""
+            },
+            {
+                "code": "3303113",
+                "name": "KİMYA",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303115",
+                "name": "MAKİNE MÜHENDİSLİĞİNE GİRİŞ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303120",
+                "name": "MATEMATİK-1",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "5",
+                "type": ""
+            },
+            {
+                "code": "3303121",
+                "name": "TEKNİK RESİM-1",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303122",
+                "name": "İMALAT TEKNOLOJİLERİ-1",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303123",
+                "name": "YABANCI DİL-1",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "2",
+                "type": ""
+            },
+            {
+                "code": "3303153",
+                "name": "ATATÜRK İLKELERİ VE İNKILAP TARİHİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303154",
+                "name": "Matematik-1 (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303155",
+                "name": "FİZİK-1 (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303156",
+                "name": "Teknik Resim 1 (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303157",
+                "name": "İMALAT TEKNOLOJİLERİ-1 (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303158",
+                "name": "MAKİNE MÜHENDİSLİĞİNE GİRİŞ  (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303159",
+                "name": "KİMYA (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303005",
+                "name": "BİLİMSEL HAZIRLIK",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 0,
+                "semester": 0,
+                "akts": "0",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303153",
+                "name": "ATATÜRK İLKELERİ VE İNKILAP TARİHİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 1,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303201",
+                "name": "TÜRK DİLİ 2",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303202",
+                "name": "YABANCI DİL-2",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "3",
+                "type": ""
+            },
+            {
+                "code": "3303203",
+                "name": "ATATÜRK İLKELERİ VE İNKILAPLARI TARİHİ 2",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303204",
+                "name": "MATEMATİK 2",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "6",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303208",
+                "name": "TEKNİK RESİM 2",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "6",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303210",
+                "name": "İMALAT TEKNOLOJİLERİ 2",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "6",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303211",
+                "name": "MALZEME BİLİMİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303254",
+                "name": "Matematik-2 (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303255",
+                "name": "Fizik 2",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303256",
+                "name": "Teknik Resim 2 (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303257",
+                "name": "İMALAT TEKNOLOJİLERİ-2 (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303259",
+                "name": "Lineer Cebir (YM) (N.Ö)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 1,
+                "semester": 2,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303302",
+                "name": "TERMODİNAMİK-1",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303303",
+                "name": "DİFERANSİYEL DENKLEMLER",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303304",
+                "name": "BİLGİSAYAR DESTEKLİ TEKNİK RESİM",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303305",
+                "name": "STATİK",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303308",
+                "name": "İMALAT TEKNOLOJİLERİ-3",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "5",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303309",
+                "name": "KESİCİ TAKIM TEKNOLOJİLERİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "5",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303313",
+                "name": "İŞÇİ SAĞLIĞI VE GÜVENLİĞİ-1",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303351",
+                "name": "Termodinamik-1 (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303352",
+                "name": "Diferansiyel Denklemler (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303353",
+                "name": "Bilgisayar Destekli Teknik Resim (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303354",
+                "name": "STATİK (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303355",
+                "name": "BİLGİSAYAR PROGRAMLAMA (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303356",
+                "name": "İŞÇİ SAĞLIĞI VE İŞ GÜVENLİĞİ-1 (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303357",
+                "name": "Mukavemet I YM",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303358",
+                "name": "TOZ METALURJİSİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "3",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303359",
+                "name": "MODERN İMALAT YÖNTEMLERİ (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "3",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303360",
+                "name": "SAC METAL KALIPÇILIĞI (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "3",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303363",
+                "name": "Temel Motor Teknolojisi (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 3,
+                "akts": "3",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303413",
+                "name": "ALTERNATİF ENERJİ KAYNAKLARI",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "5",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3304470",
+                "name": "İŞLETME ORGANİZASYONU",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303402",
+                "name": "TERMODİNAMİK 2",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303404",
+                "name": "BİLGİSAYAR KONTROLLÜ TAKIM TEZGAHLARI(CNC)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303410",
+                "name": "KALİTE SİSTEMLERİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "5",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303412",
+                "name": "TEMEL MOTOR TEKNOLOJİLERİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "5",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303451",
+                "name": "DİNAMİK (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303452",
+                "name": "Termodinamik-2 (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303453",
+                "name": "ÖLÇME TEKNİKLERİ (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303454",
+                "name": "İŞÇİ SAĞLIĞI VE İŞ GÜVENLİĞİ 2 (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "2",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303456",
+                "name": "Mukavemet II YM",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303458",
+                "name": "BİLGİSAYAR KONTROLLÜ TAKIM. TEZ. (CNC) (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "3",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303463",
+                "name": "İÇTEN YANMALI MOTORLAR (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "3",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303465",
+                "name": "Güç Aktarma Organları (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "3",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3313453",
+                "name": "ÖLÇME TEKNİKLERİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303501",
+                "name": "MAKİNA ELEMANLARI-1",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303502",
+                "name": "AKIŞKANLAR MEKANİĞİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303503",
+                "name": "ISI TRANSFERİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303507",
+                "name": "LİSANS ARAŞTIRMA PROJESİ -1",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303512",
+                "name": "GÜÇ AKTARMA ORGANLARI",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "5",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303515",
+                "name": "SOĞUTMA SİSTEMLERİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303518",
+                "name": "MÜHENDİSLİKTE DENEYSEL YÖNTEMLER",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303519",
+                "name": "İLETİŞİM TEKNİKLERİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "3",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303523",
+                "name": "GİRİŞİMCİLİK VE İŞ PLANI HAZIRLAMA",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "3",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303551",
+                "name": "Makine Elemanları I (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303553",
+                "name": "ISI TRANSFERİ (YM) NÖ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303554",
+                "name": "MEKANİZMA TEKNİĞİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "3",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303554",
+                "name": "MEKANİZMA TEKNİĞİ (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303555",
+                "name": "Sayısal Analiz (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "3",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303557",
+                "name": "KESİCİ TAKIM TEKNOLOJİLERİ (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "3",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303560",
+                "name": "Otomatik Kontrol (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "3",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303564",
+                "name": "Otomotiv Elektrik ve Elektroniği (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303570",
+                "name": "Uçak Motorları YM",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303570",
+                "name": "RAYLI SİSTEM TEKNOLOJİLERİ (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3313553",
+                "name": "ISI TRANSFERİ (YM) İÖ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303455",
+                "name": "AKIŞKANLAR MEKANİĞİ-1",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 2,
+                "semester": 4,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303513",
+                "name": "YAKITLAR VE YANMA",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 5,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303601",
+                "name": "MAKİNE ELEMANLARI 2",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303602",
+                "name": "SİSTEM DİNAMİĞİ VE KONTROL",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303607",
+                "name": "LİSANS ARAŞTIRMA PROJESİ 2",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303609",
+                "name": "Geleneksel Olmayan İmalat Yöntemleri",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "5",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303613",
+                "name": "BENZİN VE DİZEL ENJEKSİYON SİSTEMLERİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "5",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303614",
+                "name": "ISI DEĞİŞTİRİCİLER",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "5",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303615",
+                "name": "ENERJİ YÖNETİMİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "5",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303616",
+                "name": "SONLU ELEMANLAR METODU",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "5",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303651",
+                "name": "Makine Elemanları II (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303652",
+                "name": "MAKİNA DİNAMİĞİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303653",
+                "name": "TEKNİK İNGİLİZCE (YM) NÖ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "3",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303655",
+                "name": "Mühendislik Matematiği (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303660",
+                "name": "HİDROLİK-PNÖMATİK SİSTEMLER (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "3",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303662",
+                "name": "Bilgisayar Destekli Mühendislik Analizi  (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "3",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303673",
+                "name": "Motor Dinamiği (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3313653",
+                "name": "TEKNİK İNGİLİZCE (YM) İÖ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 3,
+                "semester": 6,
+                "akts": "3",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3301754",
+                "name": "GİRİŞİMCİLİK VE PROJE YÖNETİMİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "3",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303701",
+                "name": "İŞ YERİ EĞİTİMİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "26",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303704",
+                "name": "STAJ 2",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": ""
+            },
+            {
+                "code": "3303751",
+                "name": "MÜHENDİSLİKTE VERİ ANALİZİ (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "3",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303752",
+                "name": "MAKİNA TASARIMI (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303753",
+                "name": "SİSTEM DİNAMİĞİ VE KONTROL",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303754",
+                "name": "GİRİŞİMCİLİK VE PROJE YÖNETİMİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "3",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303766",
+                "name": "TRİBOLOJİ (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303770",
+                "name": "TESİSAT TEKNOLOJİSİ VE TASARIMI (YM) NÖ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303772",
+                "name": "TAŞIT KAYNAKLI EMİSYONLAR",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303783",
+                "name": "KALİTE YÖNETİMİ VE STANDARDİZASYON  (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303786",
+                "name": "MÜHENDİSLİK EKONOMİSİ (YM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303789",
+                "name": "GİRİŞİMCİLİK ve İŞ PLANI HAZIRLAMA",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303791",
+                "name": "Proje Yönetimi",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "2",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3313770",
+                "name": "TESİSAT TEKNOLOJİSİ VE TASARIMI (YM) İÖ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303762",
+                "name": "BİLGİSAYAR DESTEKLİ TASARIM VE ÜRETİM (CAD-CAM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 7,
+                "akts": "4",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303801",
+                "name": "MAKİNA TASARIMI",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 8,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303802",
+                "name": "ELEKTRİK VE ELEKTRONİK PRENSİPLER",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 8,
+                "akts": "3",
+                "type": ""
+            },
+            {
+                "code": "3303804",
+                "name": "BİLGİSAYAR DESTEKLİ TASARIM VE ÜRETİM(CAD-CAM)",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 8,
+                "akts": "4",
+                "type": "Normal Ders (Zorunlu)"
+            },
+            {
+                "code": "3303824",
+                "name": "TAŞIT GÜVENLİK SİSTEMLERİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 8,
+                "akts": "5",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303835",
+                "name": "KALİTE YÖNETİM VE STANDARDİZASYON",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 8,
+                "akts": "5",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303836",
+                "name": "FİKRİ VE SNAİ HAKLAR",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 8,
+                "akts": "5",
+                "type": "Se&#231;meli Ders"
+            },
+            {
+                "code": "3303843",
+                "name": "LİSANS BİTİRME PROJESİ",
+                "department_key": "me",
+                "department_name": "Makine Mühendisliği",
+                "class_level": 4,
+                "semester": 8,
+                "akts": "5",
+                "type": "Normal Ders (Zorunlu)"
+            }
+        ]
+    }
+}
+
+def get_courses_by_department(dept_key_or_name=None):
+    """Bölüme göre ders listesi döndürür."""
+    if not dept_key_or_name:
+        all_c = []
+        for d in FACULTY_COURSES.values():
+            all_c.extend(d['courses'])
+        return all_c
+
+    dept_lower = dept_key_or_name.lower().strip()
+    for k, d in FACULTY_COURSES.items():
+        if k == dept_lower or d['department_name'].lower() == dept_lower or dept_lower in d['department_name'].lower():
+            return d['courses']
+    return []
+
+def find_course(code_or_name):
+    """Kod veya isme göre ders arar."""
+    if not code_or_name:
+        return None
+    val = code_or_name.strip().upper()
+    for d in FACULTY_COURSES.values():
+        for c in d['courses']:
+            if c['code'] == val or c['name'].upper() == val:
+                return c
+    return None
+
+# Geriye dönük uyumluluk için Bilgisayar Mühendisliği dersleri sözlüğü
+BOLOGNA_COURSES = {c['code']: c for c in FACULTY_COURSES['ceng']['courses']}
+
+def get_course_name(code):
+    c = find_course(code)
+    return c['name'] if c else ''
+
+def get_courses_by_class(class_level, dept=None):
+    courses = get_courses_by_department(dept)
+    return [c for c in courses if c['class_level'] == int(class_level)]

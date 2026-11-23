@@ -1,0 +1,347 @@
+{% extends "base.html" %}
+
+{% block title %}Ana Sayfa • Selçuk Bilgisayar Mühendisliği Not Havuzu{% endblock %}
+
+{% block content %}
+<!-- HERO BÖLÜMÜ -->
+<section class="hero-section text-center">
+    <div class="container">
+        <div class="hero-pill-badge">
+            <i class="fa-solid fa-hand-holding-heart text-teal"></i>
+            Topluma Hizmet Uygulamaları Dayanışma Projesi
+        </div>
+        <h1 class="hero-title">
+            Bilgiyi Paylaş, <span class="hero-gradient-text">Geleceği Birlikte İnşa Et!</span>
+        </h1>
+        <p class="hero-subtitle">
+            Selçuk Üniversitesi Bilgisayar Mühendisliği öğrencileri için vize ve final dönemlerinde ders notlarına, sınav özetlerine ve çalışma kaynaklarına ücretsiz, reklamsız ve hızlı erişim havuzu.
+        </p>
+
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#exploreNotes" class="btn btn-primary-action px-4 py-2">
+                <i class="fa-solid fa-magnifying-glass me-1"></i> Notları Keşfet
+            </a>
+            <a href="{{ url_for('upload_page') }}" class="btn btn-outline-action px-4 py-2">
+                <i class="fa-solid fa-arrow-up-from-bracket me-1"></i> Yeni Not Yükle
+            </a>
+        </div>
+
+        <!-- İSTATİSTİK ŞERİDİ (STAT STRIP) -->
+        <div class="stats-strip mt-5">
+            <div class="stat-strip-card">
+                <div class="stat-strip-icon icon-teal">
+                    <i class="fa-solid fa-folder-open"></i>
+                </div>
+                <div class="text-start">
+                    <div class="stat-strip-val">{{ total_notes }}</div>
+                    <div class="stat-strip-lbl">Yüklenen Not</div>
+                </div>
+            </div>
+
+            <div class="stat-strip-card">
+                <div class="stat-strip-icon icon-blue">
+                    <i class="fa-solid fa-circle-down"></i>
+                </div>
+                <div class="text-start">
+                    <div class="stat-strip-val">{{ total_downloads }}</div>
+                    <div class="stat-strip-lbl">Toplam İndirme</div>
+                </div>
+            </div>
+
+            <div class="stat-strip-card">
+                <div class="stat-strip-icon icon-purple">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                </div>
+                <div class="text-start">
+                    <div class="stat-strip-val">{{ total_courses }}</div>
+                    <div class="stat-strip-lbl">Kayıtlı Ders</div>
+                </div>
+            </div>
+
+            <div class="stat-strip-card">
+                <div class="stat-strip-icon icon-amber">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                </div>
+                <div class="text-start">
+                    <div class="stat-strip-val">{{ total_upvotes }}</div>
+                    <div class="stat-strip-lbl">Faydalı Oyu</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NOTLAR VE FİLTRELEME ALANI -->
+<section class="py-5" id="exploreNotes">
+    <div class="container">
+        
+        <!-- ARAMA VE FİLTRE PANELİ -->
+        <div class="filter-panel">
+            <form method="GET" action="{{ url_for('index') }}" id="filterForm">
+                <div class="row g-3">
+                    
+                    <!-- Bölüm Filtresi -->
+                    <div class="col-lg-3 col-md-6">
+                        <select name="department" class="form-select filter-select">
+                            <option value="">Tüm Bölümler (Fakülte Geneli)</option>
+                            <option value="Bilgisayar Mühendisliği" {% if current_department == 'Bilgisayar Mühendisliği' or current_department == 'ceng' %}selected{% endif %}>Bilgisayar Mühendisliği</option>
+                            <option value="Elektrik-Elektronik Mühendisliği" {% if current_department == 'Elektrik-Elektronik Mühendisliği' or current_department == 'ee' %}selected{% endif %}>Elektrik-Elektronik Mühendisliği</option>
+                            <option value="Makine Mühendisliği" {% if current_department == 'Makine Mühendisliği' or current_department == 'me' %}selected{% endif %}>Makine Mühendisliği</option>
+                        </select>
+                    </div>
+
+                    <!-- Arama Çubuğu -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="search-input-wrapper">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <input 
+                                type="text" 
+                                name="q" 
+                                class="form-control form-control-search" 
+                                placeholder="Ders kodu, adı veya konu ara..." 
+                                value="{{ current_search }}"
+                                autocomplete="off"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Sınıf Düzeyi Filtresi -->
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                        <select name="class_level" class="form-select filter-select">
+                            <option value="">Tüm Sınıflar</option>
+                            <option value="1" {% if current_class == '1' %}selected{% endif %}>1. Sınıf</option>
+                            <option value="2" {% if current_class == '2' %}selected{% endif %}>2. Sınıf</option>
+                            <option value="3" {% if current_class == '3' %}selected{% endif %}>3. Sınıf</option>
+                            <option value="4" {% if current_class == '4' %}selected{% endif %}>4. Sınıf</option>
+                        </select>
+                    </div>
+
+                    <!-- Sınav Türü Filtresi -->
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                        <select name="exam_type" class="form-select filter-select">
+                            <option value="">Tüm Sınavlar</option>
+                            <option value="Vize" {% if current_exam == 'Vize' %}selected{% endif %}>Vize Notları</option>
+                            <option value="Final" {% if current_exam == 'Final' %}selected{% endif %}>Final Notları</option>
+                            <option value="Genel" {% if current_exam == 'Genel' %}selected{% endif %}>Genel Özetler</option>
+                        </select>
+                    </div>
+
+                    <!-- Format & Sıralama & Buton -->
+                    <div class="col-lg-2 col-md-6 col-sm-12 d-flex gap-2">
+                        <select name="file_type" class="form-select filter-select" title="Dosya Türü">
+                            <option value="">Format</option>
+                            <option value="pdf" {% if current_file_type == 'pdf' %}selected{% endif %}>PDF</option>
+                            <option value="image" {% if current_file_type == 'image' %}selected{% endif %}>Görsel</option>
+                        </select>
+                        <select name="sort" class="form-select filter-select" title="Sıralama">
+                            <option value="newest" {% if current_sort == 'newest' %}selected{% endif %}>En Yeni</option>
+                            <option value="popular" {% if current_sort == 'popular' %}selected{% endif %}>Popüler</option>
+                            <option value="top_rated" {% if current_sort == 'top_rated' %}selected{% endif %}>En İyi</option>
+                            <option value="oldest" {% if current_sort == 'oldest' %}selected{% endif %}>En Eski</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary-action px-3" title="Filtrele">
+                            <i class="fa-solid fa-filter"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Aktif Filtre Etiketleri / Temizle -->
+                {% if current_search or current_department or current_class or current_exam or current_file_type or (current_sort and current_sort != 'newest') %}
+                <div class="d-flex align-items-center justify-content-between mt-3 pt-3 border-top flex-wrap gap-2">
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <span class="small text-muted fw-bold">Aktif Filtreler:</span>
+                        {% if current_department %}
+                        <span class="badge bg-teal text-white border">
+                            <i class="fa-solid fa-building-columns me-1"></i>{{ current_department }}
+                        </span>
+                        {% endif %}
+                        {% if current_search %}
+                        <span class="badge bg-light text-dark border">
+                            Arama: "{{ current_search }}"
+                        </span>
+                        {% endif %}
+                        {% if current_class %}
+                        <span class="badge bg-light text-dark border">
+                            {{ current_class }}. Sınıf
+                        </span>
+                        {% endif %}
+                        {% if current_exam %}
+                        <span class="badge bg-light text-dark border">
+                            {{ current_exam }}
+                        </span>
+                        {% endif %}
+                        {% if current_file_type %}
+                        <span class="badge bg-light text-dark border">
+                            Format: {{ current_file_type|upper }}
+                        </span>
+                        {% endif %}
+                    </div>
+                    <a href="{{ url_for('index') }}" class="btn btn-sm btn-link text-decoration-none text-danger fw-bold p-0">
+                        <i class="fa-solid fa-xmark me-1"></i> Filtreleri Temizle
+                    </a>
+                </div>
+                {% endif %}
+            </form>
+        </div>
+
+        <!-- NOT KARTLARI BAŞLIĞI VE LİSTESİ -->
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <div>
+                <h2 class="h4 fw-bold text-dark mb-1">Mevcut Ders Notları</h2>
+                <p class="text-muted small mb-0">Toplam <strong>{{ notes|length }}</strong> adet kaynak listeleniyor.</p>
+            </div>
+            <a href="{{ url_for('upload_page') }}" class="btn btn-sm btn-outline-action d-none d-md-inline-flex">
+                <i class="fa-solid fa-plus me-1"></i> Not Ekle
+            </a>
+        </div>
+
+        {% if notes %}
+        <div class="notes-grid">
+            {% for note in notes %}
+            <div class="note-card">
+                <div>
+                    <!-- Üst Rozetler ve Format -->
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="course-code-tag">{{ note.course_code }}</span>
+                            <span class="badge-custom {{ note.badge_class_for_level }}">
+                                {{ note.class_level }}. Sınıf
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center gap-1">
+                            <span class="badge-custom {{ note.badge_class_for_exam }}">
+                                {{ note.exam_type }}
+                            </span>
+                            {% if note.file_type == 'pdf' %}
+                            <span class="badge-custom badge-file-pdf" title="PDF Dosyası">
+                                <i class="fa-solid fa-file-pdf"></i> PDF
+                            </span>
+                            {% else %}
+                            <span class="badge-custom badge-file-img" title="Görsel Dosyası">
+                                <i class="fa-solid fa-image"></i> {{ note.file_type|upper }}
+                            </span>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Not Başlığı ve Ders Adı -->
+                    <h3 class="note-card-title" title="{{ note.title }}">
+                        {{ note.title }}
+                    </h3>
+                    <div class="note-card-course-name d-flex align-items-center justify-content-between flex-wrap gap-1">
+                        <div>
+                            <i class="fa-solid fa-book-open fs-6 text-teal me-1"></i>
+                            <span>{{ note.course_name }}</span>
+                        </div>
+                        <span class="badge bg-light text-secondary border small" style="font-size: 0.72rem;">
+                            {{ note.department }}
+                        </span>
+                    </div>
+
+                    <!-- Açıklama -->
+                    {% if note.description %}
+                    <p class="note-card-desc" title="{{ note.description }}">
+                        {{ note.description }}
+                    </p>
+                    {% endif %}
+                </div>
+
+                <div>
+                    <!-- Meta Bilgi Şeridi (İndirme, Boyut, Tarih) -->
+                    <div class="note-meta-row">
+                        <div class="d-flex align-items-center gap-3">
+                            <span title="İndirme Sayısı">
+                                <i class="fa-solid fa-download me-1 text-teal"></i> {{ note.download_count }}
+                            </span>
+                            <span title="Dosya Boyutu">
+                                <i class="fa-solid fa-hard-drive me-1 text-muted"></i> {{ note.formatted_size }}
+                            </span>
+                        </div>
+                        <span class="small text-muted" title="Yüklenme Tarihi">
+                            {{ note.formatted_date }}
+                        </span>
+                    </div>
+
+                    <!-- Oylama ve Hata Bildirimi Butonları -->
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <div class="vote-group">
+                            <button 
+                                type="button" 
+                                class="btn-vote" 
+                                data-note-id="{{ note.id }}" 
+                                data-vote-type="up" 
+                                title="Faydalı Buldum"
+                            >
+                                <i class="fa-regular fa-thumbs-up"></i>
+                                <span class="vote-count">{{ note.upvotes }}</span>
+                            </button>
+                            <button 
+                                type="button" 
+                                class="btn-vote" 
+                                data-note-id="{{ note.id }}" 
+                                data-vote-type="down" 
+                                title="Yetersiz Buldum"
+                            >
+                                <i class="fa-regular fa-thumbs-down"></i>
+                                <span class="vote-count">{{ note.downvotes }}</span>
+                            </button>
+                        </div>
+
+                        <button 
+                            type="button" 
+                            class="btn-report" 
+                            data-note-id="{{ note.id }}" 
+                            data-note-title="{{ note.course_code }} - {{ note.title }}"
+                            title="Hatalı veya uygunsuz içerik bildir"
+                        >
+                            <i class="fa-regular fa-flag me-1"></i> Bildir
+                        </button>
+                    </div>
+
+                    <!-- Aksiyon Butonları (Önizle & İndir) -->
+                    <div class="note-actions-row">
+                        <button 
+                            type="button" 
+                            class="btn btn-outline-action btn-preview"
+                            data-note-id="{{ note.id }}"
+                            data-note-title="{{ note.course_code }} - {{ note.title }}"
+                            data-file-type="{{ note.file_type }}"
+                        >
+                            <i class="fa-solid fa-eye"></i> Önizle
+                        </button>
+                        <a 
+                            href="{{ url_for('download_note', id=note.id) }}" 
+                            class="btn btn-primary-action"
+                            download
+                        >
+                            <i class="fa-solid fa-download"></i> İndir
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <!-- BOŞ DURUM (EMPTY STATE) -->
+        <div class="empty-state bg-white rounded-4 border p-5">
+            <i class="fa-regular fa-folder-open empty-state-icon"></i>
+            <h3 class="h5 fw-bold text-dark mt-2">Eşleşen Ders Notu Bulunamadı</h3>
+            <p class="text-muted small mx-auto" style="max-width: 480px;">
+                Arama kriterlerinize uygun ders notu mevcut değil. Filtreleri temizleyebilir veya elinizdeki notu yükleyerek arkadaşlarınıza yardımcı olabilirsiniz.
+            </p>
+            <div class="d-flex justify-content-center gap-2 mt-3">
+                <a href="{{ url_for('index') }}" class="btn btn-outline-action">
+                    <i class="fa-solid fa-arrows-rotate me-1"></i> Tüm Notları Göster
+                </a>
+                <a href="{{ url_for('upload_page') }}" class="btn btn-primary-action">
+                    <i class="fa-solid fa-cloud-arrow-up me-1"></i> İlk Notu Sen Yükle
+                </a>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,326 @@
+{% extends "base.html" %}
+
+{% block title %}Ders Notu Paylaş • Selçuk Bilgisayar Mühendisliği{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="upload-card-wrapper">
+            
+            <!-- Başlık ve Yönlendirme -->
+            <div class="text-center mb-4">
+                <a href="{{ url_for('index') }}" class="btn btn-sm btn-link text-decoration-none text-muted mb-2">
+                    <i class="fa-solid fa-arrow-left me-1"></i> Not Havuzuna Geri Dön
+                </a>
+                <h1 class="h2 fw-bold text-dark">Ders Notu & Kaynak Paylaş</h1>
+                <p class="text-muted">
+                    Hazırladığın ders özetlerini, formül kartlarını ve çözümlü soruları paylaşarak Selçuk Üniversitesi Bilgisayar Mühendisliği öğrencileri arasındaki dayanışmaya güç kat.
+                </p>
+            </div>
+
+            <!-- Kart Formu -->
+            <div class="bg-white rounded-4 border p-4 p-md-5 shadow-sm">
+                <form id="noteUploadForm" method="POST" action="{{ url_for('api_upload') }}" enctype="multipart/form-data">
+
+                    <!-- SÜRÜKLE & BIRAK DOSYA YÜKLEME ALANI -->
+                    <div class="mb-4">
+                        <label class="form-label fw-bold text-dark">
+                            <i class="fa-solid fa-file-arrow-up text-teal me-1"></i> Belge Dosyası (PDF veya Görsel) *
+                        </label>
+
+                        <div class="dropzone-container" id="uploadDropzone">
+                            <input 
+                                type="file" 
+                                id="noteFileInput" 
+                                name="file" 
+                                accept=".pdf,.jpg,.jpeg,.png" 
+                                class="d-none" 
+                                required
+                            >
+                            
+                            <div class="dropzone-prompt">
+                                <div class="dropzone-icon">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                </div>
+                                <h3 class="h6 fw-bold text-dark mb-1">Dosyayı buraya sürükleyin veya seçmek için tıklayın</h3>
+                                <p class="text-muted small mb-0">Desteklenen Formatlar: <strong>PDF, JPG, JPEG, PNG</strong> (Maksimum: <strong>25 MB</strong>)</p>
+                            </div>
+
+                            <!-- Seçilen Dosya Önizleme Alanı -->
+                            <div class="selected-file-preview" id="filePreview">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="fa-solid fa-file-circle-check fs-2 text-teal"></i>
+                                    <div class="text-start">
+                                        <div class="fw-bold text-dark text-truncate" id="fileNameDisplay" style="max-width: 320px;"></div>
+                                        <div class="text-muted small" id="fileSizeDisplay"></div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-outline-danger" id="btnRemoveFile" title="Dosyayı Kaldır">
+                                    <i class="fa-solid fa-trash-can me-1"></i> Kaldır
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BÖLÜM VE DERS SEÇİMİ (BOLOGNA ENTEGRASYONLU) -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-5">
+                            <label for="departmentSelect" class="form-label fw-bold small text-dark">
+                                <i class="fa-solid fa-building-columns text-teal me-1"></i> Mühendislik Bölümü *
+                            </label>
+                            <select class="form-select filter-select" id="departmentSelect" name="department" required>
+                                <option value="" disabled selected>Bölüm Seçiniz</option>
+                                <option value="Bilgisayar Mühendisliği">Bilgisayar Mühendisliği</option>
+                                <option value="Elektrik-Elektronik Mühendisliği">Elektrik-Elektronik Mühendisliği</option>
+                                <option value="Makine Mühendisliği">Makine Mühendisliği</option>
+                            </select>
+                        </div>
+                        <div class="col-md-7">
+                            <label for="courseSelect" class="form-label fw-bold small text-dark">
+                                <i class="fa-solid fa-book-bookmark text-teal me-1"></i> Ders Seçiniz *
+                            </label>
+                            <select class="form-select filter-select" id="courseSelect" disabled required>
+                                <option value="">-- Önce Bölüm Seçiniz --</option>
+                            </select>
+                            <div class="form-text small text-muted">
+                                Dersi seçtiğinizde resmi Bologna ders kodu ve sınıfı otomatik gelecektir.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OTOMATİK DOLDURULAN DERS DETAYLARI (GÖRSEL BİLGİ ALANI) -->
+                    <div class="p-3 bg-light rounded-3 border mb-3" id="courseAutoInfo" style="display: none;">
+                        <div class="row g-2 align-items-center">
+                            <div class="col-sm-4">
+                                <span class="text-muted small">Resmi Ders Kodu:</span>
+                                <div class="fw-bold text-dark font-monospace" id="displayCourseCode">-</div>
+                                <input type="hidden" id="course_code" name="course_code" value="">
+                            </div>
+                            <div class="col-sm-8">
+                                <span class="text-muted small">Seçilen Ders Adı:</span>
+                                <div class="fw-bold text-dark" id="displayCourseName">-</div>
+                                <input type="hidden" id="course_name" name="course_name" value="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MANUEL DERS GİRİŞ ALANI (İSTEĞE BAĞLI YEDEK) -->
+                    <div id="manualCourseFields" style="display: none;" class="mb-3 p-3 bg-warning-subtle rounded-3 border border-warning">
+                        <div class="row g-2">
+                            <div class="col-md-4">
+                                <label for="manual_course_code" class="form-label small fw-bold">Ders Kodu (İsteğe Bağlı)</label>
+                                <input type="text" class="form-control form-control-sm" id="manual_course_code" placeholder="Örn: 3301151">
+                            </div>
+                            <div class="col-md-8">
+                                <label for="manual_course_name" class="form-label small fw-bold">Ders Adı *</label>
+                                <input type="text" class="form-control form-control-sm" id="manual_course_name" placeholder="Dersin tam adını yazınız">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SINIF VE SINAV TÜRÜ -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="class_level" class="form-label fw-bold small text-dark">Sınıf Düzeyi *</label>
+                            <select class="form-select filter-select" id="class_level" name="class_level" required>
+                                <option value="" disabled selected>Sınıf Seviyesi Seçiniz</option>
+                                <option value="1">1. Sınıf</option>
+                                <option value="2">2. Sınıf</option>
+                                <option value="3">3. Sınıf</option>
+                                <option value="4">4. Sınıf</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="exam_type" class="form-label fw-bold small text-dark">Sınav Dönemi / Türü *</label>
+                            <select class="form-select filter-select" id="exam_type" name="exam_type" required>
+                                <option value="" disabled selected>Sınav Türü Seçiniz</option>
+                                <option value="Vize">Vize Sınavı Notu</option>
+                                <option value="Final">Final Sınavı Notu</option>
+                                <option value="Genel">Genel Ders Özeti & Formül Kartı</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- NOT BAŞLIĞI -->
+                    <div class="mb-3">
+                        <label for="title" class="form-label fw-bold small text-dark">Not Başlığı *</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="title" 
+                            name="title" 
+                            placeholder="Örn: Ağaç Yapıları ve Rotasyon Algoritmaları Vize Özeti" 
+                            required
+                        >
+                    </div>
+
+                    <!-- EK AÇIKLAMA -->
+                    <div class="mb-4">
+                        <label for="description" class="form-label fw-bold small text-dark">Kısa Açıklama (İsteğe Bağlı)</label>
+                        <textarea 
+                            class="form-control" 
+                            id="description" 
+                            name="description" 
+                            rows="3" 
+                            placeholder="Notun içeriği, hangi haftaları veya konuları kapsadığı hakkında kısa bilgi..."
+                        ></textarea>
+                    </div>
+
+                    <!-- KVKK / DAYANIŞMA İLKESİ BİLGİLENDİRME KUTUSU -->
+                    <div class="kvkk-info-box mb-4">
+                        <i class="fa-solid fa-shield-halved fs-5 mt-1 flex-shrink-0"></i>
+                        <div>
+                            <strong>Dayanışma ve İçerik İlkeleri:</strong>
+                            <p class="mb-0 mt-1">
+                                Lütfen telif hakkı ihlali oluşturan ticari kitap taramaları veya üçüncü şahıslara ait kişisel veri (T.C. Kimlik Numarası, telefon numarası, kişisel imza vb.) içeren belgeler yüklemeyiniz. Yalnızca öğrencilerin kendi hazırladığı çalışma notları ve açık özetler paylaşılmalıdır.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- GÖNDER BUTONU -->
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary-action py-3 fs-6" id="btnSubmitUpload">
+                            <i class="fa-solid fa-cloud-arrow-up me-2"></i> Notu Doğrula ve Dayanışma Havuzuna Ekle
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+const facultyCourses = {{ faculty_courses | tojson | safe }};
+
+document.addEventListener('DOMContentLoaded', () => {
+    const deptSelect = document.getElementById('departmentSelect');
+    const courseSelect = document.getElementById('courseSelect');
+    const courseAutoInfo = document.getElementById('courseAutoInfo');
+    const displayCode = document.getElementById('displayCourseCode');
+    const displayName = document.getElementById('displayCourseName');
+    const hiddenCode = document.getElementById('course_code');
+    const hiddenName = document.getElementById('course_name');
+    const classLevelSelect = document.getElementById('class_level');
+    const manualFields = document.getElementById('manualCourseFields');
+    const manualCode = document.getElementById('manual_course_code');
+    const manualName = document.getElementById('manual_course_name');
+
+    // Bölüm değiştiğinde
+    deptSelect.addEventListener('change', () => {
+        const selectedDept = deptSelect.value;
+        courseSelect.innerHTML = '<option value="">-- Dersi Seçiniz --</option>';
+        courseSelect.disabled = true;
+        courseAutoInfo.style.display = 'none';
+        manualFields.style.display = 'none';
+        hiddenCode.value = '';
+        hiddenName.value = '';
+
+        if (!selectedDept) return;
+
+        let matchedDeptKey = null;
+        for (const [key, data] of Object.entries(facultyCourses)) {
+            if (data.department_name === selectedDept) {
+                matchedDeptKey = key;
+                break;
+            }
+        }
+
+        if (matchedDeptKey && facultyCourses[matchedDeptKey].courses) {
+            const courses = facultyCourses[matchedDeptKey].courses;
+            courses.sort((a, b) => a.semester - b.semester || a.code.localeCompare(b.code));
+
+            const groups = { 1: [], 2: [], 3: [], 4: [] };
+            courses.forEach(c => {
+                if (groups[c.class_level]) {
+                    groups[c.class_level].push(c);
+                }
+            });
+
+            for (let lvl = 1; lvl <= 4; lvl++) {
+                if (groups[lvl] && groups[lvl].length > 0) {
+                    const optgroup = document.createElement('optgroup');
+                    optgroup.label = `${lvl}. Sınıf Dersleri`;
+                    groups[lvl].forEach(c => {
+                        const opt = document.createElement('option');
+                        opt.value = c.code;
+                        opt.textContent = `${c.name} (${c.code})`;
+                        opt.dataset.name = c.name;
+                        opt.dataset.level = c.class_level;
+                        optgroup.appendChild(opt);
+                    });
+                    courseSelect.appendChild(optgroup);
+                }
+            }
+
+            // Listede olmayan özel ders seçeneği
+            const customGroup = document.createElement('optgroup');
+            customGroup.label = "Diğer / Özel";
+            const customOpt = document.createElement('option');
+            customOpt.value = "CUSTOM";
+            customOpt.textContent = "+ Listede Olmayan Özel Bir Ders Gir...";
+            customGroup.appendChild(customOpt);
+            courseSelect.appendChild(customGroup);
+
+            courseSelect.disabled = false;
+        }
+    });
+
+    // Ders seçildiğinde
+    courseSelect.addEventListener('change', () => {
+        const val = courseSelect.value;
+        if (!val) {
+            courseAutoInfo.style.display = 'none';
+            manualFields.style.display = 'none';
+            hiddenCode.value = '';
+            hiddenName.value = '';
+            return;
+        }
+
+        if (val === 'CUSTOM') {
+            courseAutoInfo.style.display = 'none';
+            manualFields.style.display = 'block';
+            if (manualName) manualName.required = true;
+            hiddenCode.value = manualCode.value.trim().toUpperCase() || 'GENEL';
+            hiddenName.value = manualName.value.trim();
+            return;
+        }
+
+        if (manualName) manualName.required = false;
+        manualFields.style.display = 'none';
+        const selectedOption = courseSelect.options[courseSelect.selectedIndex];
+        const courseName = selectedOption.dataset.name;
+        const classLevel = selectedOption.dataset.level;
+
+        displayCode.textContent = val;
+        displayName.textContent = courseName;
+        hiddenCode.value = val;
+        hiddenName.value = courseName;
+
+        if (classLevel && classLevelSelect) {
+            classLevelSelect.value = classLevel;
+        }
+
+        courseAutoInfo.style.display = 'block';
+    });
+
+    if (manualCode) {
+        manualCode.addEventListener('input', () => {
+            if (courseSelect.value === 'CUSTOM') {
+                hiddenCode.value = manualCode.value.trim().toUpperCase() || 'GENEL';
+            }
+        });
+    }
+    if (manualName) {
+        manualName.addEventListener('input', () => {
+            if (courseSelect.value === 'CUSTOM') {
+                hiddenName.value = manualName.value.trim();
+            }
+        });
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Selçuk Üniversitesi Bilgisayar Mühendisliği Topluma Hizmet Uygulamaları Ders Notu ve Kaynak Dayanışma Platformu - Reklamsız, ücretsiz ve açık not havuzu.">
+    <meta name="keywords"
+        content="Selçuk Üniversitesi, Bilgisayar Mühendisliği, Ders Notları, Vize, Final, Topluma Hizmet, SÜ CENG, Not Havuzu">
+    <meta name="author" content="Selçuk Üniversitesi Bilgisayar Mühendisliği Öğrencileri">
+    <title>{% block title %}Açık Not Havuzu • Selçuk Üniversitesi Bilgisayar Mühendisliği{% endblock %}</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Özel Tasarım Stilleri -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body>
+
+    <!-- ÜST NAVİGASYON (NAVBAR) -->
+    <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-3" href="{{ url_for('index') }}">
+                <div class="brand-logo-badge">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="d-flex flex-column">
+                    <span class="brand-title">Ders Notu & Kaynak Havuzu</span>
+                    <span class="brand-subtitle">Selçuk Üni. Teknoloji Fakültesi • Mühendislik Bölümleri</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                aria-controls="navbarMain" aria-expanded="false" aria-label="Menüyü Aç">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-2 mt-3 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom {% if request.endpoint == 'index' %}active{% endif %}"
+                            href="{{ url_for('index') }}">
+                            <i class="fa-solid fa-layer-group me-1"></i> Not Havuzu
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom {% if request.endpoint == 'stats_page' %}active{% endif %}"
+                            href="{{ url_for('stats_page') }}">
+                            <i class="fa-solid fa-chart-pie me-1"></i> İstatistikler
+                        </a>
+                    </li>
+                    {% if is_admin %}
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom text-warning fw-semibold {% if request.endpoint == 'admin_dashboard' %}active{% endif %}"
+                            href="{{ url_for('admin_dashboard') }}">
+                            <i class="fa-solid fa-shield-halved me-1"></i> Admin Paneli
+                            {% if pending_notes_count and pending_notes_count > 0 %}
+                            <span class="badge rounded-pill bg-warning text-dark ms-1">{{ pending_notes_count }}</span>
+                            {% endif %}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom text-danger" href="{{ url_for('admin_logout') }}"
+                            title="Yönetici Oturumunu Kapat">
+                            <i class="fa-solid fa-arrow-right-from-bracket me-1"></i> Çıkış
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom {% if request.endpoint == 'admin_login' %}active{% endif %}"
+                            href="{{ url_for('admin_login') }}">
+                            <i class="fa-solid fa-shield-halved me-1"></i> Yönetici Paneli
+                        </a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-primary-action px-3 py-2" href="{{ url_for('upload_page') }}">
+                            <i class="fa-solid fa-cloud-arrow-up"></i> Not Paylaş
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FLASH BİLDİRİM MESAJLARI -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="container mt-3">
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category if category != 'error' else 'danger' }} alert-dismissible fade show shadow-sm rounded-3 d-flex align-items-center"
+            role="alert">
+            <i class="fa-solid fa-circle-info me-2 fs-5"></i>
+            <div>{{ message }}</div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Kapat"></button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <!-- 404 ÖZEL GÖRÜNÜM -->
+    {% if not_found %}
+    <div class="container my-5 py-5 text-center">
+        <div class="empty-state">
+            <i class="fa-solid fa-compass empty-state-icon text-muted"></i>
+            <h2 class="fw-bold mt-3">Aradığınız Sayfa Bulunamadı</h2>
+            <p class="text-muted">Sayfa taşınmış veya silinmiş olabilir. Ana sayfaya dönerek notları inceleyebilirsiniz.
+            </p>
+            <a href="{{ url_for('index') }}" class="btn btn-primary-action mt-2">
+                <i class="fa-solid fa-house me-1"></i> Not Havuzuna Dön
+            </a>
+        </div>
+    </div>
+    {% else %}
+    <!-- ANA İÇERİK BLOKU -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    {% endif %}
+
+    <!-- GENEL BELGE ÖNİZLEME MODALI -->
+    <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-bottom py-3 px-4">
+                    <h5 class="modal-title fw-bold text-dark d-flex align-items-center gap-2" id="previewModalTitle">
+                        <i class="fa-solid fa-file-lines text-teal"></i> Belge Önizleme
+                    </h5>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="#" id="previewModalDownloadBtn" class="btn btn-sm btn-primary-action px-3"
+                            target="_blank">
+                            <i class="fa-solid fa-download me-1"></i> İndir
+                        </a>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                    </div>
+                </div>
+                <div class="preview-modal-body" id="previewModalContent">
+                    <!-- Dinamik iframe veya görsel içeriği -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GENEL HATALI İÇERİK BİLDİRİM MODALI -->
+    <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-bottom py-3 px-4">
+                    <h5 class="modal-title fw-bold text-danger d-flex align-items-center gap-2" id="reportModalLabel">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Hatalı İçerik Bildir
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="text-muted small mb-3">
+                        <strong id="reportNoteTitle" class="text-dark"></strong> için bildirim oluşturuyorsunuz.
+                        Topluluk kalitemizi korumamıza yardımcı olduğunuz için teşekkürler.
+                    </p>
+                    <div class="mb-3">
+                        <label for="reportReason" class="form-label fw-bold small text-secondary">Bildirim
+                            Nedeni</label>
+                        <select class="form-select filter-select" id="reportReason">
+                            <option value="Okunaksız veya Bozuk Belge">Okunaksız / Bozuk Belge Dosyası</option>
+                            <option value="Yanlış Ders veya Sınav Dönemi">Yanlış Ders Kodu / Adı veya Sınav Dönemi
+                            </option>
+                            <option value="Telif Hakkı veya Kişisel Veri İhlali">Telif Hakkı veya Kişisel Veri İhlali
+                            </option>
+                            <option value="Eksik veya Hatalı Sayfalar">Eksik Sayfalar / Yanıltıcı Çözümler</option>
+                            <option value="Diğer">Diğer</option>
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label for="reportOtherDetails" class="form-label fw-bold small text-secondary">Ek Açıklama
+                            (İsteğe Bağlı)</label>
+                        <textarea class="form-control" id="reportOtherDetails" rows="3"
+                            placeholder="Sorunu kısaca açıklayınız..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer border-top py-3 px-4">
+                    <button type="button" class="btn btn-outline-action" data-bs-dismiss="modal">İptal</button>
+                    <button type="button" class="btn btn-danger px-4" id="btnSubmitReport">
+                        <i class="fa-solid fa-paper-plane me-1"></i> Bildirimi Gönder
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST BİLDİRİM KONTEYNERİ -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- ALT BİLGİ (FOOTER) -->
+    <footer class="custom-footer mt-auto">
+        <div class="container">
+            <div class="row align-items-center gy-3">
+                <div class="col-md-6 text-center text-md-start">
+                    <div class="d-flex align-items-center gap-2 justify-content-center justify-content-md-start mb-1">
+                        <i class="fa-solid fa-graduation-cap text-teal fs-5"></i>
+                        <span class="fw-bold text-dark">Selçuk Üniversitesi Teknoloji Fakültesi</span>
+                    </div>
+                    <p class="small text-muted mb-0">
+                        Bilgisayar, Elektrik-Elektronik ve Makine Mühendisliği • Açık Kaynaklı Ders Notu Dayanışma
+                        Platformu
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="d-flex justify-content-center justify-content-md-end gap-3 small align-items-center">
+                        <a href="{{ url_for('index') }}" class="footer-link">Not Havuzu</a>
+                        <span>•</span>
+                        <a href="{{ url_for('upload_page') }}" class="footer-link">Not Yükle</a>
+                        <span>•</span>
+                        <a href="{{ url_for('stats_page') }}" class="footer-link">Platform İstatistikleri</a>
+                        <span>•</span>
+                        {% if is_admin %}
+                        <a href="{{ url_for('admin_dashboard') }}" class="footer-link text-warning fw-bold"><i
+                                class="fa-solid fa-shield-halved me-1"></i>Yönetici</a>
+                        {% else %}
+                        <a href="{{ url_for('admin_login') }}" class="footer-link text-muted"><i
+                                class="fa-solid fa-lock me-1"></i>Yönetici Girişi</a>
+                        {% endif %}
+                    </div>
+                    <p class="small text-muted mt-2 mb-0">
+                        Ticari amaç gütmeyen öğrenci dayanışma girişimidir.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Ana Uygulama JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_scripts %}{% endblock %}
+</body>
+
+</html>

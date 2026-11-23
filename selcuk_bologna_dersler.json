@@ -1,0 +1,946 @@
+{
+  "3301151": {
+    "code": "3301151",
+    "name": "MATEMATİK-1",
+    "class_level": 1,
+    "semester": 1,
+    "akts": "6",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301152": {
+    "code": "3301152",
+    "name": "FİZİK-1",
+    "class_level": 1,
+    "semester": 1,
+    "akts": "6",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301153": {
+    "code": "3301153",
+    "name": "TÜRK DİLİ I",
+    "class_level": 1,
+    "semester": 1,
+    "akts": "2",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301154": {
+    "code": "3301154",
+    "name": "ATATÜRK İLKELERİ VE İNKILAP TARİHİ-1",
+    "class_level": 1,
+    "semester": 1,
+    "akts": "2",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301155": {
+    "code": "3301155",
+    "name": "YABANCI DİL-1",
+    "class_level": 1,
+    "semester": 1,
+    "akts": "2",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301156": {
+    "code": "3301156",
+    "name": "BİLGİSAYAR MÜHENDİSLİĞİNE GİRİŞ",
+    "class_level": 1,
+    "semester": 1,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301157": {
+    "code": "3301157",
+    "name": "İŞ SAĞLIĞI VE GÜVENLİĞİ-1",
+    "class_level": 1,
+    "semester": 1,
+    "akts": "2",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301158": {
+    "code": "3301158",
+    "name": "LİNEER CEBİR",
+    "class_level": 1,
+    "semester": 1,
+    "akts": "6",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301251": {
+    "code": "3301251",
+    "name": "MATEMATİK-2",
+    "class_level": 1,
+    "semester": 2,
+    "akts": "6",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301252": {
+    "code": "3301252",
+    "name": "FİZİK-2",
+    "class_level": 1,
+    "semester": 2,
+    "akts": "6",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301253": {
+    "code": "3301253",
+    "name": "TÜRK DİLİ II",
+    "class_level": 1,
+    "semester": 2,
+    "akts": "2",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301254": {
+    "code": "3301254",
+    "name": "ATATÜRK İLKELERİ VE İNKILAP TARİHİ-2",
+    "class_level": 1,
+    "semester": 2,
+    "akts": "2",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301255": {
+    "code": "3301255",
+    "name": "YABANCI DİL-2",
+    "class_level": 1,
+    "semester": 2,
+    "akts": "2",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301256": {
+    "code": "3301256",
+    "name": "PROGRAMLAMA DİLİ-1",
+    "class_level": 1,
+    "semester": 2,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301257": {
+    "code": "3301257",
+    "name": "İŞ SAĞLIĞI VE GÜVENLİĞİ-2",
+    "class_level": 1,
+    "semester": 2,
+    "akts": "2",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301258": {
+    "code": "3301258",
+    "name": "AYRIK MATEMATİK",
+    "class_level": 1,
+    "semester": 2,
+    "akts": "6",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301351": {
+    "code": "3301351",
+    "name": "NESNEYE YÖNELİK PROGRAMLAMA DİLİ",
+    "class_level": 2,
+    "semester": 3,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301352": {
+    "code": "3301352",
+    "name": "İŞLETİM SİSTEMLERİ",
+    "class_level": 2,
+    "semester": 3,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301353": {
+    "code": "3301353",
+    "name": "MANTIK DEVRELERİ-1",
+    "class_level": 2,
+    "semester": 3,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301354": {
+    "code": "3301354",
+    "name": "VERİ YAPILARI VE UYGULAMALARI",
+    "class_level": 2,
+    "semester": 3,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301355": {
+    "code": "3301355",
+    "name": "ELEKTRONİK DEVRE ELEMANLARI VE ÖLÇME",
+    "class_level": 2,
+    "semester": 3,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301356": {
+    "code": "3301356",
+    "name": "SAYISAL YÖNTEMLER",
+    "class_level": 2,
+    "semester": 3,
+    "akts": "5",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301357": {
+    "code": "3301357",
+    "name": "iSTATİSTİK VE OLASILIK",
+    "class_level": 2,
+    "semester": 3,
+    "akts": "5",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301451": {
+    "code": "3301451",
+    "name": "MÜHENDİSLİK MATEMATİĞİ",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "7",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301452": {
+    "code": "3301452",
+    "name": "PROGRAMLAMA DİLİ-2",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301453": {
+    "code": "3301453",
+    "name": "MANTIK DEVRELERİ-2",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301454": {
+    "code": "3301454",
+    "name": "VERİTABANI YÖNETİM SİSTEMLERİ",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "5",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301455": {
+    "code": "3301455",
+    "name": "YAZILIM MÜHENDİSLİĞİ",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301456": {
+    "code": "3301456",
+    "name": "MOBİL PROGRAMLAMA",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301461": {
+    "code": "3301461",
+    "name": "TEKNOLOJİ TARİHİ",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301462": {
+    "code": "3301462",
+    "name": "İŞ HUKUKU VE ETİK",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301463": {
+    "code": "3301463",
+    "name": "İLETİŞİM BECERİLERİ VE AKADEMİK RAPORLAMA",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301464": {
+    "code": "3301464",
+    "name": "SOSYAL SORUMLULUK VE DEĞERLER EĞİTİMİ",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301465": {
+    "code": "3301465",
+    "name": "ETKİLİ İLETİŞİM VE BEDEN DİLİ",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301466": {
+    "code": "3301466",
+    "name": "MEDYA OKUR YAZARLIĞI",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301467": {
+    "code": "3301467",
+    "name": "YÖNETİM VE ORGANİZASYON",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301468": {
+    "code": "3301468",
+    "name": "ÇEVRE VE EKOLOJİ",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301469": {
+    "code": "3301469",
+    "name": "YAŞAM BOYU ÖĞRENME",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301470": {
+    "code": "3301470",
+    "name": "İLETİŞİM VE STRES YÖNETİMİ",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301471": {
+    "code": "3301471",
+    "name": "GÖNÜLLÜLÜK ÇALIŞMALARI",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301472": {
+    "code": "3301472",
+    "name": "DİJİTAL DÖNÜŞÜM",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301473": {
+    "code": "3301473",
+    "name": "SOSYAL İNGİLİZCE",
+    "class_level": 2,
+    "semester": 4,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301551": {
+    "code": "3301551",
+    "name": "MİKROİŞLEMCİLER VE MİKRODENETLEYİCİLER",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "5",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301552": {
+    "code": "3301552",
+    "name": "PROGRAMLAMA DİLİ-3",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "5",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301553": {
+    "code": "3301553",
+    "name": "VERİ HABERLEŞMESİ VE AĞLAR",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "5",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301554": {
+    "code": "3301554",
+    "name": "TEKNİK İNGİLİZCE",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "3",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301561": {
+    "code": "3301561",
+    "name": "SİNYAL İŞLEME",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301562": {
+    "code": "3301562",
+    "name": "TASARIM DESENLERİ",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301563": {
+    "code": "3301563",
+    "name": "İNSAN BİLGİSAYAR ETKİLEŞİMİ",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301564": {
+    "code": "3301564",
+    "name": "BİYOMEDİKAL SİSTEMLER",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301565": {
+    "code": "3301565",
+    "name": "SİMÜLASYON VE MODELLEME",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301566": {
+    "code": "3301566",
+    "name": "BİLGİSAYAR DONANIMI",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301567": {
+    "code": "3301567",
+    "name": "WEB TASARIMI",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301568": {
+    "code": "3301568",
+    "name": "VERİ MADENCİLİĞİ",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301569": {
+    "code": "3301569",
+    "name": "ADLİ BİLİŞİM",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301570": {
+    "code": "3301570",
+    "name": "VERİ TABANI PROGRMALAMA",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301571": {
+    "code": "3301571",
+    "name": "MAKİNE ÖĞRENMESİ",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301572": {
+    "code": "3301572",
+    "name": "ALGORİTMA ANALİZİ",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301573": {
+    "code": "3301573",
+    "name": "DOĞAL DİL İŞLEME TEMELLERİ",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301574": {
+    "code": "3301574",
+    "name": "NESNELERİN İNTERNETİ",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301575": {
+    "code": "3301575",
+    "name": "İLERİ DİJİTAL SİSTEMLER",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301576": {
+    "code": "3301576",
+    "name": "BİLGİSAYAR MÜHENDİSLİĞİNDE ÖZEL KONULAR",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301577": {
+    "code": "3301577",
+    "name": "SİBER SİSTEMLER VE BİLGİ GÜVENLİĞİ",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301578": {
+    "code": "3301578",
+    "name": "SÜRDÜRÜLEBİLİR YAZILIM MÜHENDİSLİĞİ",
+    "class_level": 3,
+    "semester": 5,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301651": {
+    "code": "3301651",
+    "name": "YAPAY ZEKA",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301652": {
+    "code": "3301652",
+    "name": "OTOMATA TEORİSİ VE BİÇİMSEL DİLLER",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301653": {
+    "code": "3301653",
+    "name": "GÖRÜNTÜ İŞLEME",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301654": {
+    "code": "3301654",
+    "name": "MÜHENDİSLİK TASARIMI",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "6",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301661": {
+    "code": "3301661",
+    "name": "SİSTEM PROGRAMLAMA",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301662": {
+    "code": "3301662",
+    "name": "BİLGİSAYAR VE AĞ GÜVENLİĞİ",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301663": {
+    "code": "3301663",
+    "name": "GÖMÜLÜ SİSTEMLER",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301664": {
+    "code": "3301664",
+    "name": "İŞ ZEKASI",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301665": {
+    "code": "3301665",
+    "name": "ROBOTİK",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301666": {
+    "code": "3301666",
+    "name": "İŞLETİM SİSTEMLERİ YÖNETİMİ",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301667": {
+    "code": "3301667",
+    "name": "WEB SERVİSLERİ",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301668": {
+    "code": "3301668",
+    "name": "MİKROBİLGİSAYARLI SİSTEM TASARIMI",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301669": {
+    "code": "3301669",
+    "name": "MESLEKİ İNGİLİZCE",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301670": {
+    "code": "3301670",
+    "name": "KRİPTOLOJİ",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301671": {
+    "code": "3301671",
+    "name": "BİLGİSAYAR BİLİMLERİNDE İNOVASYON VE ARAŞTIRMA TEKNİKLERİ",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301672": {
+    "code": "3301672",
+    "name": "DİSİPLİNLERARASI ÇALIŞMA",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301673": {
+    "code": "3301673",
+    "name": "GERÇEKÇİ MODELLEME VE SİMÜLASYON TASARIMI",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301674": {
+    "code": "3301674",
+    "name": "WEB PROGRAMLAMA",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301675": {
+    "code": "3301675",
+    "name": "SÜRDÜRÜLEBİLİR BİLİŞİM TEKNOLOJİLERİ",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301676": {
+    "code": "3301676",
+    "name": "STEGANOGRAFİ",
+    "class_level": 3,
+    "semester": 6,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301751": {
+    "code": "3301751",
+    "name": "BİLGİSAYAR MÜHENDİSLİĞİ UYGULAMALARI",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301752": {
+    "code": "3301752",
+    "name": "BİLGİSAYAR MİMARİSİ VE ORGANİZASYONU",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301753": {
+    "code": "3301753",
+    "name": "VERİ BİLİMİ",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301754": {
+    "code": "3301754",
+    "name": "GİRİŞİMCİLİK VE PROJE YÖNETİMİ",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "3",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301761": {
+    "code": "3301761",
+    "name": "PROG. MANTIK KONTROLLÖR",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301762": {
+    "code": "3301762",
+    "name": "PARALEL İŞLEMCİLİ SİSTEMLER",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301763": {
+    "code": "3301763",
+    "name": "KONTROL SİSTEMLERİ",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301764": {
+    "code": "3301764",
+    "name": "BİLGİSAYAR DESTEKLİ TASARIM",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301765": {
+    "code": "3301765",
+    "name": "YÖNEYLEM ARAŞTIRMASI",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301766": {
+    "code": "3301766",
+    "name": "KABLOSUZ AĞLAR",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301767": {
+    "code": "3301767",
+    "name": "BULUT BİLİŞİM",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301768": {
+    "code": "3301768",
+    "name": "PAKET PROGRAMLAR",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301769": {
+    "code": "3301769",
+    "name": "BİLGİSAYAR GRAFİKLERİ",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301770": {
+    "code": "3301770",
+    "name": "VERİ İLETİŞİM TEKNİKLERİ",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301771": {
+    "code": "3301771",
+    "name": "OYUN PROGRAMLAMA",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301772": {
+    "code": "3301772",
+    "name": "E-TİCARET VE UYGULAMALARI",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301773": {
+    "code": "3301773",
+    "name": "PARALEL PROGRAMLAMA",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301774": {
+    "code": "3301774",
+    "name": "MVC TABANLI WEB MİMARİSİ",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301775": {
+    "code": "3301775",
+    "name": "YEŞİL BİLİŞİM",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301776": {
+    "code": "3301776",
+    "name": "ÇEVRE VE ENERJİ",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "6",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301777": {
+    "code": "3301777",
+    "name": "BLOKZİNCİR TEMELLERİ",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301778": {
+    "code": "3301778",
+    "name": "BÜYÜK VERİ ANALİTİĞİ",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301779": {
+    "code": "3301779",
+    "name": "BİLGİSAYARLA GÖRME",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "4",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301782": {
+    "code": "3301782",
+    "name": "KALİTE VE GÜVENCE SİSTEMLERİ",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301783": {
+    "code": "3301783",
+    "name": "MÜHENDİSLİK EKONOMİSİ",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301784": {
+    "code": "3301784",
+    "name": "İŞARET DİLİ",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301785": {
+    "code": "3301785",
+    "name": "DIŞ TİCARET",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301786": {
+    "code": "3301786",
+    "name": "TOPLUMA HİZMET UYGULAMALARI",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301787": {
+    "code": "3301787",
+    "name": "REKLAMCILIK VE STRATEJİLERİ",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301788": {
+    "code": "3301788",
+    "name": "ARAŞTIRMA VE RAPOR YAZMA TEKNİKLERİ",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301789": {
+    "code": "3301789",
+    "name": "MÜHENDİSLİK ETİĞİ",
+    "class_level": 4,
+    "semester": 7,
+    "akts": "2",
+    "type": "Se&#231;meli Ders"
+  },
+  "3301851": {
+    "code": "3301851",
+    "name": "İŞLETMEDE MESLEKİ EĞİTİM",
+    "class_level": 4,
+    "semester": 8,
+    "akts": "20",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301852": {
+    "code": "3301852",
+    "name": "STAJ-1",
+    "class_level": 4,
+    "semester": 8,
+    "akts": "5",
+    "type": "Normal Ders (Zorunlu)"
+  },
+  "3301853": {
+    "code": "3301853",
+    "name": "STAJ-2",
+    "class_level": 4,
+    "semester": 8,
+    "akts": "5",
+    "type": "Normal Ders (Zorunlu)"
+  }
+}
